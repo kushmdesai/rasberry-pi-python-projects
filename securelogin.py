@@ -4,7 +4,7 @@ import hashlib
 conn = sqlite3.connect("userdata.db")
 cur = conn.cursor()
 
-cur.execute("""
+cur.execute(""" 
 CREATE TABLE IF NOT EXISTS userdata(
         id INTEGER PRIMARY KEY,
         username varchar(255) not null,
@@ -21,4 +21,4 @@ cur.execute("INSERT INTO userdata(username,password) VALUES (?,?)",(username2, p
 cur.execute("INSERT INTO userdata(username,password) VALUES (?,?)",(username3, password3))
 cur.execute("INSERT INTO userdata(username,password) VALUES (?,?)",(username4, password4))
 
-conn.commit
+conn.commit()
