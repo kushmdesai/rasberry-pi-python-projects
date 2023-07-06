@@ -12,8 +12,10 @@ pygame.display.set_caption('checkers')
 def main():
     run = True
     clock = pygame.time.Clock()
-    gboard = board()
+    Board = board()
 
+    piece =Board.get_piece(0,1)
+    Board.move(piece, 4, 3)
     while run :
       clock.tick(FPS)
        
@@ -23,7 +25,7 @@ def main():
     
         if event.type == pygame.MOUSEBUTTONDOWN:
          pass
-      gboard.draw(WIN)
+      Board.draw(WIN)
       pygame.display.update()    
     pygame.quit()
 main()    
