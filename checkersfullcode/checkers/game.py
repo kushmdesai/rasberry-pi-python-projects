@@ -63,3 +63,10 @@ class game:
 
     def winner(self):
         return self.board.winner()
+
+    def get_board(self):
+        return self.board
+    
+    def ai_move(self, board):
+        self.board = board
+        self.change_turn()
